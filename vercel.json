@@ -1,0 +1,18 @@
+{
+	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"installCommand": "pnpm install",
+	"buildCommand": "pnpm --filter @mapa-cobertura/web build",
+	"outputDirectory": "apps/web/build",
+	"framework": null,
+	"rewrites": [
+		{ "source": "/api/(.*)", "destination": "/api" },
+		{ "source": "/((?!api/).*)", "destination": "/index.html" }
+	],
+	"functions": {
+		"api/index.js": {
+			"memory": 1024,
+			"maxDuration": 30,
+			"includeFiles": "apps/api/src/**"
+		}
+	}
+}

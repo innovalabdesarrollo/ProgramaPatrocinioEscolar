@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+:root {
+	--brand: #0f4c5c;
+	--brand-2: #e36414;
+	--surface: #f8fafc;
+}
+
+body {
+	font-family: 'Segoe UI', ui-sans-serif, system-ui, sans-serif;
+}
+
+.card {
+	@apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+}
+
+.btn {
+	@apply inline-flex items-center justify-center rounded-lg bg-[var(--brand)] px-3 py-2 text-sm font-medium text-white hover:opacity-90 disabled:opacity-50;
+}
+
+.btn-secondary {
+	@apply inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50;
+}
+
+.input {
+	@apply w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-[var(--brand)] focus:ring-1 focus:ring-[var(--brand)];
+}
+
+.label {
+	@apply mb-1 block text-xs font-medium uppercase tracking-wide text-slate-500;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@mapa-cobertura/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node --env-file=../../.env src/index.js",
+    "dev:watch": "node --watch --env-file=../../.env src/index.js",
+    "start": "node --env-file=../../.env src/index.js",
+    "seed": "node --env-file=../../.env src/seed.js",
+    "test": "node --env-file=../../.env --test test/unit/*.test.js test/smoke/*.test.js",
+    "test:unit": "node --test test/unit/*.test.js",
+    "build": "node -e \"console.log('api lista')\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.3.0",
+    "mongodb": "^7.8.0",
+    "nanoid": "^5.1.6"
+  }
+}

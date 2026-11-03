@@ -1,0 +1,37 @@
+{
+  "name": "mapa-cobertura-patrocinio-escolar",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "dev:api": "pnpm --filter @mapa-cobertura/api dev",
+    "dev:web": "pnpm --filter @mapa-cobertura/web dev",
+    "seed": "pnpm --filter @mapa-cobertura/api seed",
+    "test": "pnpm --filter @mapa-cobertura/api test",
+    "test:e2e": "playwright test",
+    "build": "pnpm --filter @mapa-cobertura/web build",
+    "build:all": "pnpm -r run build",
+    "start": "pnpm -r --parallel run start"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "express": "^5.3.0",
+    "mongodb": "^7.8.0",
+    "nanoid": "^5.1.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "body-parser": ">=2.4.0",
+      "proxy-addr": ">=2.0.8",
+      "compression": ">=1.8.2",
+      "minimatch@<10.0.3": "10.0.3"
+    }
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  }
+}
